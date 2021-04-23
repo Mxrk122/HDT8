@@ -45,8 +45,8 @@ public class Caso implements Comparable<Caso>{
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return "Nombre: " + nombre +
+        return "\nNombre: " + nombre +
         "\nEnfermedad: " + enfermedad +
-        "\nPrioridad: " + character;
+        "\nPrioridad: " + character + "\n";
     }
 }
