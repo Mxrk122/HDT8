@@ -6,6 +6,11 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Driver {
+    
+    /** 
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
 
         // Crear el heap de los casos

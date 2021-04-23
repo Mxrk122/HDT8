@@ -20,6 +20,11 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 			add(v.get(i));
 		}
 	}
+	
+	/** 
+	 * @param i
+	 * @return int
+	 */
 	protected static int parent(int i)
 	// pre: 0 <= i < size
 	// post: returns parent of node at location i
@@ -27,6 +32,11 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 		return (i-1)/2;
 	}
 
+	
+	/** 
+	 * @param i
+	 * @return int
+	 */
 	protected static int left(int i)
 	// pre: 0 <= i < size
 	// post: returns index of left child of node at location i
@@ -34,6 +44,11 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 		return 2*i+1;
 	}
 
+	
+	/** 
+	 * @param i
+	 * @return int
+	 */
 	protected static int right(int i)
 	// pre: 0 <= i < size
 	// post: returns index of right child of node at location i
@@ -41,6 +56,10 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 		return (2*i+1) + 1;
 	}
 
+	
+	/** 
+	 * @param leaf
+	 */
 	protected void percolateUp(int leaf)
 	// pre: 0 <= leaf < size
 	// post: moves node at index leaf up to appropriate position
@@ -57,6 +76,10 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 		data.set(leaf,value);
 	}
 
+	
+	/** 
+	 * @param value
+	 */
 	public void add(E value)
 	// pre: value is non-null comparable
 	// post: value is added to priority queue
@@ -65,6 +88,10 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 		percolateUp(data.size()-1);
 	}
 
+	
+	/** 
+	 * @param root
+	 */
 	protected void pushDownRoot(int root)
 	// pre: 0 <= root < size
 	// post: moves node at index root down
@@ -99,6 +126,10 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 		}
 	}
 
+	
+	/** 
+	 * @return E
+	 */
 	public E remove()
 	// pre: !isEmpty()
 	// post: returns and removes minimum value from queue
@@ -110,23 +141,39 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
 		return minVal;
 	}
 
+	
+	/** 
+	 * @return E
+	 */
 	public E removeFirst(){
 		return data.remove(0);
 	}
 
-    @Override
+    
+	/** 
+	 * @return E
+	 */
+	@Override
     public E getFirst() {
         // TODO Auto-generated method stub
         return data.get(0);
     }
 
-    @Override
+    
+	/** 
+	 * @return boolean
+	 */
+	@Override
     public boolean isEmpty() {
         // TODO Auto-generated method stub
         return data.isEmpty();
     }
 
-    @Override
+    
+	/** 
+	 * @return int
+	 */
+	@Override
     public int size() {
         // TODO Auto-generated method stub
         return data.size();
@@ -138,7 +185,11 @@ public class VectorHeap<E extends Comparable<E>> implements PriorityQueue<E>
         data.clear();
     }
 
-    @Override
+    
+	/** 
+	 * @return String
+	 */
+	@Override
     public String toString() {
         // TODO Auto-generated method stub
         return data.toString();

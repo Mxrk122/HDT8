@@ -13,6 +13,11 @@ public class Caso implements Comparable<Caso>{
         //characterToNumber();
     }
 
+    
+    /** 
+     * @param o
+     * @return int
+     */
     @Override
     public int compareTo(Caso o) {
         // TODO Auto-generated method stub
@@ -21,6 +26,10 @@ public class Caso implements Comparable<Caso>{
         return character.compareTo(otro);
     }
     
+    
+    /** 
+     * @return String
+     */
     /*public int characterToNumber(){
         numero = Character.getNumericValue(character);
         return numero;
@@ -30,18 +39,34 @@ public class Caso implements Comparable<Caso>{
         return enfermedad;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getNombre() {
         return nombre;
     }
 
+    
+    /** 
+     * @return String
+     */
     public String getCharacter() {
         return character;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getNumero() {
         return numero;
     }
 
+    
+    /** 
+     * @return String
+     */
     @Override
     public String toString() {
         // TODO Auto-generated method stub
